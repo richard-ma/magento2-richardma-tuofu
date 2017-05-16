@@ -5,17 +5,17 @@ namespace Richardma\Tuofu\Model;
 class Payment extends \Magento\Payment\Model\Method\Cc
 {
     const CODE = 'richardma_tuofu';
+
     protected $_code = self::CODE;
     protected $_isGateway                   = true;
     protected $_canCapture                  = true;
-    protected $_canCapturePartial           = true;
-    protected $_canRefund                   = true;
-    protected $_canRefundInvoicePartial     = true;
-    protected $_stripeApi = false;
+    protected $_canCapturePartial           = false;
+    protected $_canRefund                   = false;
+    protected $_canRefundInvoicePartial     = false;
     protected $_countryFactory;
     protected $_minAmount = null;
     protected $_maxAmount = null;
-    protected $_supportedCurrencyCodes = array('USD');
+    //protected $_supportedCurrencyCodes = array('USD');
     protected $_debugReplacePrivateDataKeys = ['number', 'exp_month', 'exp_year', 'cvc'];
     public function __construct(
         \Magento\Framework\Model\Context $context,

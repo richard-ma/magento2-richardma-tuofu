@@ -218,6 +218,14 @@ class Payment extends \Magento\Payment\Model\Method\Cc
                 $requestData['Amount'].
                 $requestData['CurrCode'];			
             $requestData['HashValue'] = $this->_szComputeMD5Hash($md5src);
+            $requestData = http_build_query($requestData, '', '&');
+            // 请求信息完成
+            
+            // 发送请求并判断结果，成功后要获取transaction_id
+            // 设置支付状态
+            $payment
+                ->setTransactionId($charge->id)
+                ->setIsTransactionClosed(0);
 
             //$requestData = [
                 //'amount'        => $amount * 100,

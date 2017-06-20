@@ -13,7 +13,7 @@ define(
             },
 
             getCode: function() {
-                return 'richardma_tuofu';
+                return 'tuofu';
             },
 
             isActive: function() {

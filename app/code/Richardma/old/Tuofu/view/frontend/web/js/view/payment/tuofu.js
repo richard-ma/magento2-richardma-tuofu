@@ -10,7 +10,7 @@ define(
         'use strict';
         rendererList.push(
             {
-                type: 'richardma_tuofu',
+                type: 'tuofu_method',
                 component: 'Richardma_Tuofu/js/view/payment/method-renderer/tuofu-method'
             }
         );

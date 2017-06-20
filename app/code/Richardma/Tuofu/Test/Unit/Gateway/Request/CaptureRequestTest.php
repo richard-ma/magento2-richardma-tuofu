@@ -3,7 +3,7 @@
      * Copyright © 2016 Magento. All rights reserved.
      * See COPYING.txt for license details.
      */
-namespace Magento\SamplePaymentGateway\Test\Unit\Gateway\Request;
+namespace Richardma\Tuofu\Test\Unit\Gateway\Request;
 
 use Magento\Payment\Gateway\ConfigInterface;
 use Magento\Payment\Gateway\Data\OrderAdapterInterface;

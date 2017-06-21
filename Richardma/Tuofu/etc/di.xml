@@ -12,7 +12,7 @@
         <arguments>
             <argument name="code" xsi:type="const">\Richardma\Tuofu\Model\Ui\ConfigProvider::CODE</argument>
             <argument name="formBlockType" xsi:type="string">Magento\Payment\Block\Form</argument>
-            <argument name="infoBlockType" xsi:type="string">Magento\SamplePaymentGateway\Block\Info</argument>
+            <argument name="infoBlockType" xsi:type="string">Richardma\Tuofu\Block\Info</argument>
             <argument name="valueHandlerPool" xsi:type="object">SamplePaymentGatewayValueHandlerPool</argument>
             <argument name="commandPool" xsi:type="object">SamplePaymentGatewayCommandPool</argument>
         </arguments>
@@ -32,7 +32,7 @@
         </arguments>
     </virtualType>
 
-    <type name="Magento\SamplePaymentGateway\Gateway\Http\Client\ClientMock">
+    <type name="Richardma\Tuofu\Gateway\Http\Client\ClientMock">
         <arguments>
             <argument name="logger" xsi:type="object">SamplePaymentGatewayLogger</argument>
         </arguments>
@@ -54,8 +54,8 @@
         <arguments>
             <argument name="requestBuilder" xsi:type="object">SamplePaymentGatewayAuthorizationRequest</argument>
             <argument name="handler" xsi:type="object">SamplePaymentGatewayResponseHandlerComposite</argument>
-            <argument name="transferFactory" xsi:type="object">Magento\SamplePaymentGateway\Gateway\Http\TransferFactory</argument>
-            <argument name="client" xsi:type="object">Magento\SamplePaymentGateway\Gateway\Http\Client\ClientMock</argument>
+            <argument name="transferFactory" xsi:type="object">Richardma\Tuofu\Gateway\Http\TransferFactory</argument>
+            <argument name="client" xsi:type="object">Richardma\Tuofu\Gateway\Http\Client\ClientMock</argument>
         </arguments>
     </virtualType>
 
@@ -63,12 +63,12 @@
     <virtualType name="SamplePaymentGatewayAuthorizationRequest" type="Magento\Payment\Gateway\Request\BuilderComposite">
         <arguments>
             <argument name="builders" xsi:type="array">
-                <item name="transaction" xsi:type="string">Magento\SamplePaymentGateway\Gateway\Request\AuthorizationRequest</item>
-                <item name="mockData" xsi:type="string">Magento\SamplePaymentGateway\Gateway\Request\MockDataRequest</item>
+                <item name="transaction" xsi:type="string">Richardma\Tuofu\Gateway\Request\AuthorizationRequest</item>
+                <item name="mockData" xsi:type="string">Richardma\Tuofu\Gateway\Request\MockDataRequest</item>
             </argument>
         </arguments>
     </virtualType>
-    <type name="Magento\SamplePaymentGateway\Gateway\Request\AuthorizationRequest">
+    <type name="Richardma\Tuofu\Gateway\Request\AuthorizationRequest">
         <arguments>
             <argument name="config" xsi:type="object">SamplePaymentGatewayConfig</argument>
         </arguments>
@@ -77,16 +77,16 @@
     <!-- Capture command -->
     <virtualType name="SamplePaymentGatewayCaptureCommand" type="Magento\Payment\Gateway\Command\GatewayCommand">
         <arguments>
-            <argument name="requestBuilder" xsi:type="object">Magento\SamplePaymentGateway\Gateway\Request\CaptureRequest</argument>
-            <argument name="handler" xsi:type="object">Magento\SamplePaymentGateway\Gateway\Response\TxnIdHandler</argument>
-            <argument name="transferFactory" xsi:type="object">Magento\SamplePaymentGateway\Gateway\Http\TransferFactory</argument>
-            <argument name="validator" xsi:type="object">Magento\SamplePaymentGateway\Gateway\Validator\ResponseCodeValidator</argument>
-            <argument name="client" xsi:type="object">Magento\SamplePaymentGateway\Gateway\Http\Client\ClientMock</argument>
+            <argument name="requestBuilder" xsi:type="object">Richardma\Tuofu\Gateway\Request\CaptureRequest</argument>
+            <argument name="handler" xsi:type="object">Richardma\Tuofu\Gateway\Response\TxnIdHandler</argument>
+            <argument name="transferFactory" xsi:type="object">Richardma\Tuofu\Gateway\Http\TransferFactory</argument>
+            <argument name="validator" xsi:type="object">Richardma\Tuofu\Gateway\Validator\ResponseCodeValidator</argument>
+            <argument name="client" xsi:type="object">Richardma\Tuofu\Gateway\Http\Client\ClientMock</argument>
         </arguments>
     </virtualType>
 
     <!-- Capture Request -->
-    <type name="Magento\SamplePaymentGateway\Gateway\Request\CaptureRequest">
+    <type name="Richardma\Tuofu\Gateway\Request\CaptureRequest">
         <arguments>
             <argument name="config" xsi:type="object">SamplePaymentGatewayConfig</argument>
         </arguments>
@@ -95,16 +95,16 @@
     <!-- Void command -->
     <virtualType name="SamplePaymentGatewayVoidCommand" type="Magento\Payment\Gateway\Command\GatewayCommand">
         <arguments>
-            <argument name="requestBuilder" xsi:type="object">Magento\SamplePaymentGateway\Gateway\Request\VoidRequest</argument>
-            <argument name="handler" xsi:type="object">Magento\SamplePaymentGateway\Gateway\Response\TxnIdHandler</argument>
-            <argument name="transferFactory" xsi:type="object">Magento\SamplePaymentGateway\Gateway\Http\TransferFactory</argument>
-            <argument name="validator" xsi:type="object">Magento\SamplePaymentGateway\Gateway\Validator\ResponseCodeValidator</argument>
-            <argument name="client" xsi:type="object">Magento\SamplePaymentGateway\Gateway\Http\Client\ClientMock</argument>
+            <argument name="requestBuilder" xsi:type="object">Richardma\Tuofu\Gateway\Request\VoidRequest</argument>
+            <argument name="handler" xsi:type="object">Richardma\Tuofu\Gateway\Response\TxnIdHandler</argument>
+            <argument name="transferFactory" xsi:type="object">Richardma\Tuofu\Gateway\Http\TransferFactory</argument>
+            <argument name="validator" xsi:type="object">Richardma\Tuofu\Gateway\Validator\ResponseCodeValidator</argument>
+            <argument name="client" xsi:type="object">Richardma\Tuofu\Gateway\Http\Client\ClientMock</argument>
         </arguments>
     </virtualType>
 
     <!-- Void Request -->
-    <type name="Magento\SamplePaymentGateway\Gateway\Request\VoidRequest">
+    <type name="Richardma\Tuofu\Gateway\Request\VoidRequest">
         <arguments>
             <argument name="config" xsi:type="object">SamplePaymentGatewayConfig</argument>
         </arguments>
@@ -114,8 +114,8 @@
     <virtualType name="SamplePaymentGatewayResponseHandlerComposite" type="Magento\Payment\Gateway\Response\HandlerChain">
         <arguments>
             <argument name="handlers" xsi:type="array">
-                <item name="txnid" xsi:type="string">Magento\SamplePaymentGateway\Gateway\Response\TxnIdHandler</item>
-                <item name="fraud" xsi:type="string">Magento\SamplePaymentGateway\Gateway\Response\FraudHandler</item>
+                <item name="txnid" xsi:type="string">Richardma\Tuofu\Gateway\Response\TxnIdHandler</item>
+                <item name="fraud" xsi:type="string">Richardma\Tuofu\Gateway\Response\FraudHandler</item>
             </argument>
         </arguments>
     </virtualType>
@@ -134,7 +134,7 @@
         </arguments>
     </virtualType>
 
-    <type name="Magento\SamplePaymentGateway\Block\Info">
+    <type name="Richardma\Tuofu\Block\Info">
         <arguments>
             <argument name="config" xsi:type="object">SamplePaymentGatewayConfig</argument>
         </arguments>

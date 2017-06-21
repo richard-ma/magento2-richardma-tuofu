@@ -7,7 +7,7 @@ namespace Richardma\Tuofu\Test\Unit\Gateway\Response;
 
 use Magento\Payment\Gateway\Data\PaymentDataObjectInterface;
 use Magento\Sales\Model\Order\Payment;
-use Magento\SamplePaymentGateway\Gateway\Response\FraudHandler;
+use Richardma\Tuofu\Gateway\Response\FraudHandler;
 
 class FraudHandlerTest extends \PHPUnit_Framework_TestCase
 {

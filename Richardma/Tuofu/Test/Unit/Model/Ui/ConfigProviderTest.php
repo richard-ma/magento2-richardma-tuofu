@@ -5,8 +5,8 @@
  */
 namespace Richardma\Tuofu\Test\Unit\Model\Ui;
 
-use Magento\SamplePaymentGateway\Gateway\Http\Client\ClientMock;
-use Magento\SamplePaymentGateway\Model\Ui\ConfigProvider;
+use Richardma\Tuofu\Gateway\Http\Client\ClientMock;
+use Richardma\Tuofu\Model\Ui\ConfigProvider;
 
 class ConfigProviderTest extends \PHPUnit_Framework_TestCase
 {

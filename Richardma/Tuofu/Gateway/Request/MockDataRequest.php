@@ -7,7 +7,7 @@ namespace Richardma\Tuofu\Gateway\Request;
 
 use Magento\Payment\Gateway\Data\PaymentDataObjectInterface;
 use Magento\Payment\Gateway\Request\BuilderInterface;
-use Magento\SamplePaymentGateway\Gateway\Http\Client\ClientMock;
+use Richardma\Tuofu\Gateway\Http\Client\ClientMock;
 
 class MockDataRequest implements BuilderInterface
 {

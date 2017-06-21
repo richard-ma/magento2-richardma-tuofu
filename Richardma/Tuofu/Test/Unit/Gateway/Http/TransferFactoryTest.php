@@ -7,8 +7,8 @@ namespace Richardma\Tuofu\Test\Unit\Gateway\Http;
 
 use Magento\Payment\Gateway\Http\TransferBuilder;
 use Magento\Payment\Gateway\Http\TransferInterface;
-use Magento\SamplePaymentGateway\Gateway\Http\TransferFactory;
-use Magento\SamplePaymentGateway\Gateway\Request\MockDataRequest;
+use Richardma\Tuofu\Gateway\Http\TransferFactory;
+use Richardma\Tuofu\Gateway\Request\MockDataRequest;
 
 class TransferFactoryTest extends \PHPUnit_Framework_TestCase
 {

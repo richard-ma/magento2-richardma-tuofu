@@ -6,7 +6,7 @@
 namespace Richardma\Tuofu\Model\Ui;
 
 use Magento\Checkout\Model\ConfigProviderInterface;
-use Magento\SamplePaymentGateway\Gateway\Http\Client\ClientMock;
+use Richardma\Tuofu\Gateway\Http\Client\ClientMock;
 
 /**
  * Class ConfigProvider

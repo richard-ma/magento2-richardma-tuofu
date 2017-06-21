@@ -6,7 +6,7 @@
 namespace Richardma\Tuofu\Test\Unit\Model\Adminhtml\Source;
 
 use Magento\Payment\Model\Method\AbstractMethod;
-use Magento\SamplePaymentGateway\Model\Adminhtml\Source\PaymentAction;
+use Richardma\Tuofu\Model\Adminhtml\Source\PaymentAction;
 
 class PaymentActionTest extends \PHPUnit_Framework_TestCase
 {

@@ -9,7 +9,7 @@ use Magento\Payment\Gateway\ConfigInterface;
 use Magento\Payment\Gateway\Data\AddressAdapterInterface;
 use Magento\Payment\Gateway\Data\OrderAdapterInterface;
 use Magento\Payment\Gateway\Data\PaymentDataObjectInterface;
-use Magento\SamplePaymentGateway\Gateway\Request\AuthorizationRequest;
+use Richardma\Tuofu\Gateway\Request\AuthorizationRequest;
 
 class AuthorizeRequestTest extends \PHPUnit_Framework_TestCase
 {

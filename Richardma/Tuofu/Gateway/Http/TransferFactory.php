@@ -8,7 +8,7 @@ namespace Richardma\Tuofu\Gateway\Http;
 use Magento\Payment\Gateway\Http\TransferBuilder;
 use Magento\Payment\Gateway\Http\TransferFactoryInterface;
 use Magento\Payment\Gateway\Http\TransferInterface;
-use Magento\SamplePaymentGateway\Gateway\Request\MockDataRequest;
+use Richardma\Tuofu\Gateway\Request\MockDataRequest;
 
 class TransferFactory implements TransferFactoryInterface
 {

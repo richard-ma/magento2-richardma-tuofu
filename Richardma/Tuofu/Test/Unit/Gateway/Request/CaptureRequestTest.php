@@ -9,7 +9,7 @@ use Magento\Payment\Gateway\ConfigInterface;
 use Magento\Payment\Gateway\Data\OrderAdapterInterface;
 use Magento\Payment\Gateway\Data\PaymentDataObjectInterface;
 use Magento\Sales\Model\Order\Payment;
-use Magento\SamplePaymentGateway\Gateway\Request\CaptureRequest;
+use Richardma\Tuofu\Gateway\Request\CaptureRequest;
 
 class CaptureRequestTest extends \PHPUnit_Framework_TestCase
 {

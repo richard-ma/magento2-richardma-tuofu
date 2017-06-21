@@ -7,8 +7,8 @@ namespace Richardma\Tuofu\Test\Unit\Gateway\Validator;
 
 use Magento\Payment\Gateway\Validator\ResultInterface;
 use Magento\Payment\Gateway\Validator\ResultInterfaceFactory;
-use Magento\SamplePaymentGateway\Gateway\Http\Client\ClientMock;
-use Magento\SamplePaymentGateway\Gateway\Validator\ResponseCodeValidator;
+use Richardma\Tuofu\Gateway\Http\Client\ClientMock;
+use Richardma\Tuofu\Gateway\Validator\ResponseCodeValidator;
 
 class ResponseCodeValidatorTest extends \PHPUnit_Framework_TestCase
 {

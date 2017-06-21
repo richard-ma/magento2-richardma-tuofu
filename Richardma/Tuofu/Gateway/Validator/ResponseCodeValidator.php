@@ -7,7 +7,7 @@ namespace Richardma\Tuofu\Gateway\Validator;
 
 use Magento\Payment\Gateway\Validator\AbstractValidator;
 use Magento\Payment\Gateway\Validator\ResultInterface;
-use Magento\SamplePaymentGateway\Gateway\Http\Client\ClientMock;
+use Richardma\Tuofu\Gateway\Http\Client\ClientMock;
 
 class ResponseCodeValidator extends AbstractValidator
 {

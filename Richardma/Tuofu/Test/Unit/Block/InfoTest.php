@@ -8,7 +8,7 @@ namespace Richardma\Tuofu\Test\Unit\Block;
 use Magento\Framework\View\Element\Template\Context;
 use Magento\Payment\Gateway\ConfigInterface;
 use Magento\Payment\Model\InfoInterface;
-use Magento\SamplePaymentGateway\Block\Info;
+use Richardma\Tuofu\Block\Info;
 
 class InfoTest extends \PHPUnit_Framework_TestCase
 {

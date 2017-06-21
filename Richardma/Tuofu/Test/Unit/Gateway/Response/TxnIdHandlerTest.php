@@ -7,7 +7,7 @@ namespace Richardma\Tuofu\Test\Unit\Gateway\Response;
 
 use Magento\Payment\Gateway\Data\PaymentDataObjectInterface;
 use Magento\Sales\Model\Order\Payment;
-use Magento\SamplePaymentGateway\Gateway\Response\TxnIdHandler;
+use Richardma\Tuofu\Gateway\Response\TxnIdHandler;
 
 class TxnIdHandlerTest extends \PHPUnit_Framework_TestCase
 {

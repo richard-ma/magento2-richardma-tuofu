@@ -8,8 +8,8 @@ namespace Richardma\Tuofu\Test\Unit\Gateway\Request;
 use Magento\Payment\Gateway\Data\PaymentDataObjectInterface;
 use Magento\Payment\Model\InfoInterface;
 use Magento\Sales\Model\Order\Payment;
-use Magento\SamplePaymentGateway\Gateway\Http\Client\ClientMock;
-use Magento\SamplePaymentGateway\Gateway\Request\MockDataRequest;
+use Richardma\Tuofu\Gateway\Http\Client\ClientMock;
+use Richardma\Tuofu\Gateway\Request\MockDataRequest;
 
 class MockDataRequestTest extends \PHPUnit_Framework_TestCase
 {

@@ -9,11 +9,12 @@
     <default>
         <payment>
             <sample_gateway>
-                <debug>1</debug>
                 <active>0</active>
+                <cctype>AE,VI,MC,DI</cctype>
+                <debug>0</debug>
                 <model>SamplePaymentGatewayFacade</model>
                 <merchant_gateway_key backend_model="Magento\Config\Model\Config\Backend\Encrypted" />
-                <order_status>pending_payment</order_status>
+                <order_status>processing</order_status>
                 <payment_action>authorize</payment_action>
                 <title>Tuofu Payment</title>
                 <currency>USD</currency>
@@ -23,6 +24,7 @@
                 <can_use_checkout>1</can_use_checkout>
                 <is_gateway>1</is_gateway>
                 <sort_order>1</sort_order>
+                <ccfields>x_card_code,x_exp_date,x_card_num</ccfields>
                 <debugReplaceKeys>MERCHANT_KEY</debugReplaceKeys>
                 <paymentInfoKeys>FRAUD_MSG_LIST</paymentInfoKeys>
                 <privateInfoKeys>FRAUD_MSG_LIST</privateInfoKeys>

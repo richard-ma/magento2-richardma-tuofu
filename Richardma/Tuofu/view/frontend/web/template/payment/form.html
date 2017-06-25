@@ -42,6 +42,24 @@
                 </select>
             </div>
         </div>
+        <form class="form" id="co-transparent-form" action="#" method="POST" data-bind="mageInit: {
+            'transparent': {
+                'context': context(),
+                'controller': getControllerName(),
+                'gateway': getCode(),
+                'orderSaveUrl': getPlaceOrderUrl(),
+                'cgiUrl': getCgiUrl(),
+                'dateDelim': getDataDelim(),
+                'cardFieldsMap': getCardFieldsMap(),
+                'nativeAction': getSaveOrderUrl()
+            },'validation': []}">
+            <!-- ko template: 'Magento_Payment/payment/cc-form' --><!-- /ko -->
+        </form>
+        <div class="checkout-agreements-block">
+            <!-- ko foreach: $parent.getRegion('before-plack-order') -->
+                <!-- ko template: getTemplate() --><!-- /ko -->
+            <!-- /ko -->
+        </div>
 
         <div class="actions-toolbar">
             <div class="primary">

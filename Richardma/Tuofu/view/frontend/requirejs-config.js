@@ -1,7 +1,7 @@
 var config = {
     map: {
         '*': {
-            transparent: 'Magento_Payment/transparent'
+            creditCardType: 'Magento_Payment/cc-type'
         }
     }
 }

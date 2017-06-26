@@ -25,36 +25,10 @@
             <!--/ko-->
         </div>
 
-        <div class="field required">
-            <label data-bind="attr: {for: getCode() + '_transaction_result'}" class="label">
-                <span><!-- ko i18n: 'Transaction Result'--><!-- /ko --></span>
-            </label>
-
-            <div class="control">
-                <select name="payment[transaction_result]"
-                        class="select"
-                        data-bind="
-                                  options: getTransactionResults(),
-                                  optionsValue: 'value',
-                                  optionsText: 'transaction_result',
-                                  optionsCaption: $t('Transaction Result'),
-                                  value: transactionResult">
-                </select>
-            </div>
-        </div>
-        <form class="form" id="co-transparent-form" action="#" method="POST" data-bind="mageInit: {
-            'transparent': {
-                'context': context(),
-                'controller': getControllerName(),
-                'gateway': getCode(),
-                'orderSaveUrl': getPlaceOrderUrl(),
-                'cgiUrl': getCgiUrl(),
-                'dateDelim': getDataDelim(),
-                'cardFieldsMap': getCardFieldsMap(),
-                'nativeAction': getSaveOrderUrl()
-            },'validation': []}">
+        <form class="form" id="co-transparent-form" action="#" method="POST">
             <!-- ko template: 'Magento_Payment/payment/cc-form' --><!-- /ko -->
         </form>
+
         <div class="checkout-agreements-block">
             <!-- ko foreach: $parent.getRegion('before-plack-order') -->
                 <!-- ko template: getTemplate() --><!-- /ko -->

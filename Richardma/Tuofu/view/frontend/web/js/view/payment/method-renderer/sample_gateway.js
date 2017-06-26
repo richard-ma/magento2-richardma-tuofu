@@ -6,46 +6,18 @@
 /*global define*/
 define(
     [
-        'Magento_Checkout/js/view/payment/default'
+        'Magento_Payment/js/view/payment/cc-form'
     ],
     function (Component) {
         'use strict';
 
         return Component.extend({
             defaults: {
-                template: 'Richardma_Tuofu/payment/form',
-                transactionResult: ''
-            },
-
-            initObservable: function () {
-
-                this._super()
-                    .observe([
-                        'transactionResult'
-                    ]);
-                return this;
+                template: 'Richardma_Tuofu/payment/form'
             },
 
             getCode: function() {
                 return 'sample_gateway';
-            },
-
-            getData: function() {
-                return {
-                    'method': this.item.method,
-                    'additional_data': {
-                        'transaction_result': this.transactionResult()
-                    }
-                };
-            },
-
-            getTransactionResults: function() {
-                return _.map(window.checkoutConfig.payment.sample_gateway.transactionResults, function(value, key) {
-                    return {
-                        'value': key,
-                        'transaction_result': value
-                    }
-                });
             }
         });
     }

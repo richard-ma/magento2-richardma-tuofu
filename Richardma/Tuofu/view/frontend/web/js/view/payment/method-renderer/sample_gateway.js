@@ -16,6 +16,18 @@ define(
                 template: 'Richardma_Tuofu/payment/form'
             },
 
+            isActive: function() {
+                return true;
+            },
+
+            context: function() {
+                return this;
+            },
+
+            isShowLegend: function() {
+                return true;
+            },
+
             getCode: function() {
                 return 'sample_gateway';
             }

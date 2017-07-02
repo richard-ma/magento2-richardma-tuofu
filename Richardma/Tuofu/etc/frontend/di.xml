@@ -6,10 +6,22 @@
  */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Payment\Model\CcGenericConfigProvider">
+        <arguments>
+            <argument name="methodCodes" xsi:type="array">
+                <item name="tuofu" xsi:type="const">Richardma\Tuofu\Model\Ui\ConfigProvider::CODE</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="TuofuCcConfigProvider" type="Magento\Payment\Model\IframeConfigProvider">
+        <arguments>
+            <argument name="methodCode" xsi:type="const">Richardma\Tuofu\Model\Ui\ConfigProvider::CODE</argument>
+        </arguments>
+    </virtualType>
     <type name="Magento\Checkout\Model\CompositeConfigProvider">
         <arguments>
             <argument name="configProviders" xsi:type="array">
-                <item name="sample_gateway_config_provider" xsi:type="object">Richardma\Tuofu\Model\Ui\ConfigProvider</item>
+                <item name="sample_gateway_config_provider" xsi:type="object">TuofuCcConfigProvider</item>
             </argument>
         </arguments>
     </type>
